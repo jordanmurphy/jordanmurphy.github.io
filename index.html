@@ -2,16 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!--STYLESHEETS-->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!--FONT-->
+     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+   
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+       
 
-    <!--FONTS-->
 
 
-
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 
 </head>
 
@@ -21,7 +28,11 @@
 <body>
 
     <div id="blurb">
-        <h3>Jordan Murphy is a Toronto based furniture and product designer. Scroll down to see selected works and collaborations. </h3>
+        <h3>Jordan Murphy is a Toronto<br>
+            based furniture and product<br>
+            designer. Scroll down to see<br> 
+            selected works and<br> 
+            collaborations. </h3>
     </div>
 
     <div id="contact">
@@ -30,109 +41,56 @@
         </a>
     </div>
 
-
-
-    <div class="img-container">
-        <div class="img-wrap" id="first-img">
+    <div id="fullpage">
+        <div class="section">
+        </div>
+        <div class="section">
             <img src="PNG/Menu1.png">
         </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Menu2.png">
         </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Menu3.png">
         </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Menu4.png">
         </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Menu_Group.png">
         </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Ring.png">
         </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Truss.png">
         </div>
-        <div class="img-wrap">
-            <img src="PNG/Cage.png">
-        </div>
-        <div class="img-wrap">
+        <div class="section">
             <img src="PNG/Dash.png">
         </div>
-        <div class="img-wrap" id="last-img">
-            <img src="PNG/Grinder.png">
-        </div>
     </div>
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-
-    <script>
-        $('.img-container').scroll(function() {
-            if ($(this).scrollTop() + $(this).outerHeight() === ($(this)[0].scrollHeight)) {
-                $(this).scrollTop(1);
-            } else if ($(this).scrollTop() < 1) {
-                $(this).scrollTop($(this)[0].scrollHeight-1);
-            }
-          
-            console.log($(this).scrollTop());
-             console.log($(this).outerHeight());
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.extensions.min.js"></script>
+     <!--JAVASCRIPT-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                continuousVertical: true,
+                css3: true,
+                scrollingSpeed: 600,
+            });
         });
+
     </script>
 
 
 
+
+
+
+   
 </body>
 
 </html>
-
-<!--  
-<script>
-        $('.img-container').scroll(function() {
-            if ($(this).scrollTop() + $(this).outerHeight() === ($(this)[0].scrollHeight)) {
-                $(this).scrollTop(1);
-            } else if ($(this).scrollTop() < 1) {
-                $(this).scrollTop($(this)[0].scrollHeight);
-            }
-
-    console.log($(this)[0].scrollHeight);
-            console.log($(this).scrollTop());
-             console.log($(this).outerHeight());
-
-        });
-        
-    </script>
-
-
-
-
-  <!--  <script>
-        $('.img-container').scroll(function() {
-            if ($('.img-container').scrollTop() > 9000) {
-                $('.img-container').scrollTop(1);
-            } else if ($('.img-container').scrollTop() < 1) {
-                $('.img-container').scrollTop(8999);
-            }
-            console.log($('.img-container').scrollTop());
-        });
-        
-    </script>-->
-
-
-
-<!--<script>
-$(".img-container").scroll(function(){
-    if($(this)[0].scrollHeight - $(this).scrollTop() === $(this).outerHeight()) {
-        $('.img-container').scrollTop(1);
-
-    }else if ($('.img-container').scrollTop() < 1) {
-                $('.img-container').scrollTop($(this)[0].scrollHeight);
-            };
-});
-
-</script>
--->
